@@ -30,7 +30,7 @@ const App = () => {
   };
 
   return (
-    <div className="bg-[url(https://image.lexica.art/full_jpg/0fcba6ce-f2d2-46df-b45e-fa8c67f5e81f)] flex flex-col items-center min-h-screen backdrop-blur-md bg-opacity-50 bg-cover bg-center bg-slate-900">
+    <div className="bg-[url(https://image.lexica.art/full_jpg/d3657b96-284b-4555-bcbd-3bccb78f5705)] flex flex-col items-center min-h-screen  bg-cover bg-center bg-slate-900">
       <div className=" flex flex-col my-10 max-md:w-[80%] min-w-[40%] ">
         <label
           htmlFor="search"

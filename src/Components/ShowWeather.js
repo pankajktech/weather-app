@@ -21,7 +21,7 @@ const ShowWeather = (props) => {
           <img src={sun} alt="weather icon" className="h-40" />
         </div>
       </div>
-      <div className="my-5 p-2 flex max-md:flex-col md:h-40 min-w-[90%] items-center md:justify-between bg-slate-900 rounded-md md:min-w-[700px] backdrop-blur-sm bg-opacity-50 text-white">
+      <div className="my-5 p-2 flex max-md:flex-col md:h-40 min-w-[90%] items-center md:justify-around bg-slate-900 rounded-md md:min-w-[700px] backdrop-blur-sm bg-opacity-50 text-white">
         <div className=" max-md:my-3 flex items-center text-xl">
           <img
             src={humidity}
@@ -43,7 +43,7 @@ const ShowWeather = (props) => {
 
           <div className="ml-3">
             <h1 className="text-sm text-slate-100 opacity-80">Wind Speed</h1>
-            {props.data?.wind?.speed * 3.16} km/h
+            {(props.data?.wind?.speed * 3.16).toFixed(2)} Km/h
           </div>
         </div>
 

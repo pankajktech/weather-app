@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import img from "../src/Images/weather.webp";
 
 import ShowWeather from "./Components/ShowWeather";
 
@@ -9,7 +10,7 @@ const App = () => {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    getWeatherDetails("Delhi");
+    getWeatherDetails("delhi");
   }, []);
 
   const getWeatherDetails = (city) => {
@@ -20,7 +21,6 @@ const App = () => {
     axios
       .get(url)
       .then((res) => {
-        console.log(res.data);
         setData(res.data);
       })
       .catch((err) => {
@@ -29,7 +29,15 @@ const App = () => {
   };
 
   return (
-    <div className="bg-[url(https://image.lexica.art/full_jpg/d3657b96-284b-4555-bcbd-3bccb78f5705)] min-h-screen  bg-cover bg-center">
+    <div
+      style={{
+        backgroundImage: `url(${img})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+      className="min-h-screen  "
+    >
       <div className="flex flex-col items-center justify-center w-full min-h-screen backdrop-blur">
         <div className=" flex flex-col my-10 max-md:w-[80%] min-w-[40%] ">
           <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
